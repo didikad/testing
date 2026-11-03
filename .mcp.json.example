@@ -1,0 +1,19 @@
+{
+  "_catatan": "Contoh config MCP untuk 21st.dev Magic (bagian 'anti-slop' UI). File .mcp.json yang asli memakai ${API_KEY} dari environment variable, jadi key TIDAK ikut ter-commit ke GitHub. Isi key-nya lewat env var, JANGAN ditulis di file ini.",
+  "_cara_pakai": [
+    "1. Daftar/login di https://21st.dev lalu ambil API key di dashboard (ada free tier).",
+    "2. Set env var sebelum menjalankan Claude Code, mis. di ~/.zshrc atau ~/.bashrc:",
+    "     export API_KEY=\"isi-key-anda-di-sini\"",
+    "3. Buka repo ini dengan Claude Code; server 'magic' otomatis terbaca dari .mcp.json.",
+    "4. Cek dengan perintah /mcp di dalam Claude Code."
+  ],
+  "mcpServers": {
+    "magic": {
+      "command": "npx",
+      "args": ["-y", "@21st-dev/magic@latest"],
+      "env": {
+        "API_KEY": "GANTI_DENGAN_API_KEY_ANDA_ATAU_PAKAI_ENV_VAR"
+      }
+    }
+  }
+}
